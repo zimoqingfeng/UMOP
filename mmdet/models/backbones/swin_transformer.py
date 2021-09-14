@@ -5,6 +5,7 @@
 # Written by Ze Liu, Yutong Lin, Yixuan Wei
 # --------------------------------------------------------
 
+import os.path as osp
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
