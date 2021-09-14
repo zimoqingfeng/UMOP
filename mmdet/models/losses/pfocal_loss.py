@@ -148,8 +148,7 @@ class ProgressiveFocalLoss(nn.Module):
         reduction = (
             reduction_override if reduction_override else self.reduction)
 
-        gamma = reduce_mean(lvl_gamma).clamp_(min=self.gamma-self.delta,
-                                              max=self.gamma+self.delta)
+        gamma = lvl_gamma.clamp_(min=self.gamma-self.delta, max=self.gamma+self.delta)
         alpha = self.w / gamma
 
         if self.use_sigmoid:
