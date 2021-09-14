@@ -45,18 +45,8 @@ class LRPHead(ATSSHead):
         self.stacked_convs = stacked_convs
         self.conv_cfg = conv_cfg
         self.norm_cfg = norm_cfg
-        loss_cfg = [kwargs.pop('loss_conv3'),
-                    kwargs.pop('loss_conv4'),
-                    kwargs.pop('loss_conv5'),
-                    kwargs.pop('loss_conv6'),
-                    kwargs.pop('loss_conv7')]
         super(LRPHead, self).__init__(
             num_classes, in_channels, init_cfg=init_cfg, **kwargs)
-        self.loss_conv3 = build_loss(loss_cfg[0])
-        self.loss_conv4 = build_loss(loss_cfg[1])
-        self.loss_conv5 = build_loss(loss_cfg[2])
-        self.loss_conv6 = build_loss(loss_cfg[3])
-        self.loss_conv7 = build_loss(loss_cfg[4])
 
         self.sampling = False
         if self.train_cfg:
