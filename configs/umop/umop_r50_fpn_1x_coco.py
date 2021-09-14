@@ -38,20 +38,14 @@ model = dict(
             target_means=[.0, .0, .0, .0],
             target_stds=[0.1, 0.1, 0.2, 0.2]),
         loss_cls=dict(
-            type='FocalLoss',
+            type='ProgressiveFocalLoss',
             use_sigmoid=True,
-            gamma=2.0,
-            alpha=0.25,
+            delta=0.5,
+            w=0.5,
             loss_weight=1.0),
         loss_bbox=dict(type='GIoULoss', loss_weight=2.0),
         loss_centerness=dict(
-            type='CrossEntropyLoss', use_sigmoid=True, loss_weight=1.0),
-        # Added Loss
-        loss_conv3=dict(type='ProgressiveFocalLoss', use_sigmoid=True, delta=0.5, w=0.5, loss_weight=1.0),
-        loss_conv4=dict(type='ProgressiveFocalLoss', use_sigmoid=True, delta=0.5, w=0.5, loss_weight=1.0),
-        loss_conv5=dict(type='ProgressiveFocalLoss', use_sigmoid=True, delta=0.5, w=0.5, loss_weight=1.0),
-        loss_conv6=dict(type='ProgressiveFocalLoss', use_sigmoid=True, delta=0.5, w=0.5, loss_weight=1.0),
-        loss_conv7=dict(type='ProgressiveFocalLoss', use_sigmoid=True, delta=0.5, w=0.5, loss_weight=1.0)
+            type='CrossEntropyLoss', use_sigmoid=True, loss_weight=1.0)
     ),
     # training and testing settings
     train_cfg=dict(
