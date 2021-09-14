@@ -19,7 +19,7 @@ model = dict(
         patch_norm=True,
         out_indices=(0, 1, 2, 3),
         use_checkpoint=False,
-        pretrain_model_path=''),
+        pretrain_model_path='./pretrained_backbones/swin_small_patch4_window7_224.pth'),
     neck=dict(
         in_channels=[96, 192, 384, 768]))
 
