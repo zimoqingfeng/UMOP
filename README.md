@@ -22,7 +22,7 @@ For your convenience, we provide the following trained models. These models are 
 | X-101-64x4d  | pytorch   | Y       | Y             | N             | 1.5x           | 48.8              | 49.1                   |
 | R2-101       | pytorch   | Y       | Y             | N             | 2x           | 50.0              | 50.3                   |
 | Swin-S       | pytorch   | N       | Y             | N             | 2x           | 49.9              | 50.3                   |
-| Swin-S       | pytorch   | N       | Y             | N             | 2x           | 51.9              | 52.3                   |
+| Swin-S       | pytorch   | N       | Y             | Y             | 2x           | 51.9              | 52.3                   |
 | Swin-B       | pytorch   | N       | Y             | N             | 2x           | 51.6              | 51.9                   |
 | Swin-B       | pytorch   | N       | Y             | Y             | 2x           | 53.4              | 53.9                   |
 | Swin-L       | pytorch   | N       | Y             | N             | 2x           | 52.8              | 53.1                   |
