@@ -7,6 +7,7 @@ In object detection, multi-level prediction (e.g., FPN, YOLO) and resampling ski
 To mediate the influence of level imbalance, we propose a Unified Multi-level Optimization Paradigm (UMOP) consisting of two components: 1) an independent classification loss supervising each pyramid level with individual resampling considerations; 2) a progressive hard-case mining loss defining all losses across the pyramid levels without extra level-wise settings. With UMOP as a plug-and-play scheme, modern one-stage detectors can attain a **~1.5 AP** improvement with fewer training iterations and no additional computation overhead. Our best model achieves **55.1** AP on COCO test-dev. 
 
 ## Updates
+- **2021.09.22** Bugfix for num_class not equal to 80, thanks [CarryHJR](https://github.com/CarryHJR?tab=repositories).
 - **2021.09.17** We committed the coco pretrain model and train logs.
 - **2021.09.14** This repo has been committed, based on [MMDetection](https://github.com/open-mmlab/mmdetection/tree/a1cecf63c713c53941b8dcf8a9d762baf8511f2c) and [Swin-Transformer-Object-Detection](https://github.com/SwinTransformer/Swin-Transformer-Object-Detection).
 
