@@ -227,7 +227,7 @@ class FCOSHead(AnchorFreeHead):
             num_pos_samples = reduce_mean(num_pos_samples).item()
 
             if lvl_valid_labels.device.index == 0:
-                with open('/home/wubinghong/code/baidu/personal-code/mmdet/fcos_sum.log', 'a') as f:
+                with open('./fcos_sum.log', 'a') as f:
                     f.write('\t'.join([str(idx),
                                        str(num_tot_valid_labels),
                                        str(num_pos_samples)]) + '\n')
