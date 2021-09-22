@@ -91,7 +91,7 @@ class LRPHead(ATSSHead):
 
         # calculate Gamma & Alpha
         prob = cls_score.sigmoid()
-        y = F.one_hot(labels)[:, :80]
+        y = F.one_hot(labels)[:, :self.num_classes]
         pos_xse = - torch.log(prob) * y * label_weights[:, None]
         if (pos_xse > 0).sum() > 0:
             lvl_condition = pos_xse[pos_xse > 0].mean().detach()
